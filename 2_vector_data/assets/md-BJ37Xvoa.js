@@ -1,0 +1,13 @@
+import{t as e}from"./slidev/CodeBlockWrapper-DCI0FzfZ.js";import{H as t,L as n,T as r,X as i,Z as a,_ as o,_t as s,b as c,g as l,ht as u,x as d,y as f}from"./modules/shiki-pVwvuQkB.js";import{t as p}from"./slidev/two-cols-BP04Lvqk.js";import{nt as m,rt as h}from"./index-zAz7pjLP.js";var g={class:`vec-note`},_={class:`vec-note mt-3`},v={class:`vec-note mt-3`},y={class:`vec-simple mt-3`},b={__name:`2_vector_data.md__slidev_16`,setup(b){let{$slidev:x,$nav:S,$clicksContext:C,$clicks:w,$page:T,$renderContext:E,$frontmatter:D}=h();return C.setup(),(h,b)=>{let x=e,S=t(`click`);return n(),o(p,s(r(u(m)(u(D),15))),{right:i(e=>[a((n(),f(`div`,g,[...b[1]||=[l(`b`,null,`Один слой.`,-1),c(` У шейп-файла он всегда один — остальные форматы (GeoPackage, PostGIS) могут хранить десятки. `,-1)]])),[[S]]),a((n(),f(`div`,_,[...b[2]||=[l(`b`,null,`56 объектов.`,-1),c(` Число известно сразу, без чтения геометрии: слой хранит счётчик. `,-1)]])),[[S]]),a((n(),f(`div`,v,[...b[3]||=[l(`b`,null,`Порядок не алфавитный.`,-1),c(),l(`code`,null,`feature 12`,-1),c(` — это Нью-Мексико, `,-1),l(`code`,null,`feature 55`,-1),c(` — Аризона. `,-1)]])),[[S]]),a((n(),f(`div`,y,[...b[4]||=[c(` Программа ничего не знает про штаты: она просто идёт по оглавлению и достаёт по имени. Имена — уже из таблицы атрибутов. `,-1)]])),[[S]])]),default:i(()=>[b[5]||=l(`h1`,null,`Что эта программа печатает`,-1),d(x,{title:``,ranges:[]},{default:i(()=>[...b[0]||=[l(`pre`,{class:`shiki shiki-themes vitesse-dark vitesse-light slidev-code`,style:{"--shiki-dark":`#dbd7caee`,"--shiki-light":`#393a34`,"--shiki-dark-bg":`#121212`,"--shiki-light-bg":`#ffffff`}},[l(`code`,{class:`language-text`},[l(`span`,{class:`line`},[l(`span`,null,`Shapefile contains 1 layers`)]),c(`
+`),l(`span`,{class:`line`},[l(`span`)]),c(`
+`),l(`span`,{class:`line`},[l(`span`,null,`Layer 0 has spatial reference +proj=longlat +datum=NAD83 +no_defs`)]),c(`
+`),l(`span`,{class:`line`},[l(`span`,null,`Layer 0 has 56 features`)]),c(`
+`),l(`span`,{class:`line`},[l(`span`)]),c(`
+`),l(`span`,{class:`line`},[l(`span`,null,`Feature 0 has name West Virginia`)]),c(`
+`),l(`span`,{class:`line`},[l(`span`,null,`Feature 1 has name Florida`)]),c(`
+`),l(`span`,{class:`line`},[l(`span`,null,`Feature 2 has name Illinois`)]),c(`
+`),l(`span`,{class:`line`},[l(`span`,null,`Feature 3 has name Minnesota`)]),c(`
+`),l(`span`,{class:`line`},[l(`span`,null,`...`)]),c(`
+`),l(`span`,{class:`line`},[l(`span`,null,`Feature 12 has name New Mexico`)]),c(`
+`),l(`span`,{class:`line`},[l(`span`,null,`...`)]),c(`
+`),l(`span`,{class:`line`},[l(`span`,null,`Feature 55 has name Arizona`)])])],-1)]]),_:1})]),_:1},16)}}};export{b as default};

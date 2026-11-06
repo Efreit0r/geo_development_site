@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" fill="none">
+  <style>
+    /* Шаг сетки 100px, поэтому сдвиг на 100px даёт бесшовный цикл */
+    .graticule { animation: geo-pan 120s linear infinite; }
+    @keyframes geo-pan { from { transform: translate(0, 0); } to { transform: translate(100px, 100px); } }
+
+    .spin { transform-box: fill-box; transform-origin: center; animation: geo-spin 90s linear infinite; }
+    @keyframes geo-spin { to { transform: rotate(360deg); } }
+
+    .globe { transform-box: fill-box; transform-origin: center; animation: geo-breathe 16s ease-in-out infinite alternate; }
+    @keyframes geo-breathe { from { transform: scale(1); } to { transform: scale(1.012); } }
+
+    /* Спутник: короткая дуга-шлейф и точка на её конце */
+    .orbit { transform-box: fill-box; transform-origin: center; animation: geo-spin 22s linear infinite; }
+
+    .pulse { animation: geo-pulse 4.2s ease-out infinite; }
+    @keyframes geo-pulse {
+      0%   { r: 5; opacity: 0.55; }
+      70%  { r: 32; opacity: 0; }
+      100% { r: 32; opacity: 0; }
+    }
+    .pulse--2 { animation-delay: 1.4s; }
+    .pulse--3 { animation-delay: 2.8s; }
+
+    .route { stroke-dasharray: 7 11; animation: geo-dash 9s linear infinite; }
+    .route--2 { animation-duration: 13s; animation-direction: reverse; }
+    @keyframes geo-dash { to { stroke-dashoffset: -180; } }
+
+    /* В PDF-экспорте анимация не нужна */
+    @media print { * { animation: none !important; } }
+  </style>
+
+  <defs>
+    <radialGradient id="geo-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.10" />
+      <stop offset="55%" stop-color="#fff" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <g class="graticule" stroke="#fff" stroke-opacity="0.07" stroke-width="1">
+    <path d="M-200 -200V1100" />
+    <path d="M-100 -200V1100" />
+    <path d="M0 -200V1100" />
+    <path d="M100 -200V1100" />
+    <path d="M200 -200V1100" />
+    <path d="M300 -200V1100" />
+    <path d="M400 -200V1100" />
+    <path d="M500 -200V1100" />
+    <path d="M600 -200V1100" />
+    <path d="M700 -200V1100" />
+    <path d="M800 -200V1100" />
+    <path d="M900 -200V1100" />
+    <path d="M1000 -200V1100" />
+    <path d="M1100 -200V1100" />
+    <path d="M1200 -200V1100" />
+    <path d="M1300 -200V1100" />
+    <path d="M1400 -200V1100" />
+    <path d="M1500 -200V1100" />
+    <path d="M1600 -200V1100" />
+    <path d="M1700 -200V1100" />
+    <path d="M1800 -200V1100" />
+    <path d="M-200 -200H1800" />
+    <path d="M-200 -100H1800" />
+    <path d="M-200 0H1800" />
+    <path d="M-200 100H1800" />
+    <path d="M-200 200H1800" />
+    <path d="M-200 300H1800" />
+    <path d="M-200 400H1800" />
+    <path d="M-200 500H1800" />
+    <path d="M-200 600H1800" />
+    <path d="M-200 700H1800" />
+    <path d="M-200 800H1800" />
+    <path d="M-200 900H1800" />
+    <path d="M-200 1000H1800" />
+    <path d="M-200 1100H1800" />
+  </g>
+
+  <circle cx="1430" cy="520" r="350" fill="url(#geo-glow)" />
+
+  <g class="globe" stroke="#fff" stroke-opacity="0.20" stroke-width="1.2">
+    <circle cx="1430" cy="520" r="320" />
+    <ellipse cx="1430" cy="520" rx="107" ry="320" />
+    <ellipse cx="1430" cy="520" rx="213" ry="320" />
+    <ellipse cx="1430" cy="520" rx="320" ry="213" />
+    <ellipse cx="1430" cy="520" rx="320" ry="107" />
+    <path d="M1110 520H1750" />
+  </g>
+
+  <g class="spin" stroke="#fff" stroke-linecap="round">
+    <circle cx="1430" cy="520" r="342" stroke-width="1.4" stroke-opacity="0.40" stroke-dasharray="3 26" />
+    <circle cx="1430" cy="520" r="378" stroke-width="1.2" stroke-opacity="0.24" stroke-dasharray="2 40" />
+  </g>
+
+  <g class="orbit">
+    <circle cx="1430" cy="520" r="342" stroke="#fff" stroke-opacity="0.55" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="46 2100" />
+    <circle cx="1430" cy="178" r="3.2" fill="#fff" fill-opacity="0.9" />
+  </g>
+
+  <g stroke="#fff" stroke-width="1.2" stroke-opacity="0.35">
+    <path class="route" d="M1295 355Q1430 316 1552 470" />
+    <path class="route route--2" d="M1552 470Q1596 630 1440 675" />
+  </g>
+
+  <g fill="#fff">
+    <circle cx="1295" cy="355" r="4.5" fill-opacity="0.85" />
+    <circle cx="1552" cy="470" r="4.5" fill-opacity="0.85" />
+    <circle cx="1440" cy="675" r="4.5" fill-opacity="0.85" />
+  </g>
+
+  <g stroke="#fff" stroke-opacity="0.45" stroke-width="1.4">
+    <circle class="pulse" cx="1295" cy="355" r="5" />
+    <circle class="pulse pulse--2" cx="1552" cy="470" r="5" />
+    <circle class="pulse pulse--3" cx="1440" cy="675" r="5" />
+  </g>
+
+  <text x="1470" y="716" text-anchor="end" fill="#fff" fill-opacity="0.45"
+        font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15"
+        letter-spacing="1.2">59.94° N · 30.31° E</text>
+</svg>
